@@ -2,6 +2,8 @@
 
 Shiny is an R package that makes it easy to build interactive web apps straight from [R](https://www.r-project.org/). See the [link](https://shiny.rstudio.com/) for more details about Shiny and example apps. The instructions are extracted from [https://www.rstudio.com/products/shiny/download-server/](https://www.rstudio.com/products/shiny/download-server/) and assumes a Ubuntu 16.04 or later platform. For other distributions see the website.
 
+Can use this with a cloud service such as Google cloud ([[webserver_google_cloud]]).
+
 1. Install the latest version of [R](https://www.r-project.org/) from [CRAN](https://cloud.r-project.org/).
 ```bash
 sudo apt update -qq
