@@ -9,5 +9,5 @@ A knowledge-base of random stuff I found.
 	1. [[webserver_google_cloud]] - Set up a web server with Google cloud
 	2. [[x86_shiny_server]] - Set up a Shiny server on x86 based systems.
 
-3. [Windows](windows/README) related stuff.
+3. [Windows](windows/) related stuff.
 	1. [[chocolatey]] - Install Chocolatey and Chocolatey GUI.
