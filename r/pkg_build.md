@@ -21,44 +21,44 @@ All instructions are checked using the following conditions.
 
 1. Install and load `devtools` and other necessary packages.
 ```r
-    install.packages(c("devtools", "roxygen2", "testthat", "knitr"))
-    library(devtools)
+install.packages(c("devtools", "roxygen2", "testthat", "knitr"))
+library(devtools)
 ```
 
 2. Create the package. Replace ``<< path >>`` with the path where the package should be created. *If the path exists, it is used. If it does not exist, it is created, provided that the parent path exists. See [documentation](https://usethis.r-lib.org/reference/create_package.html) for more details.*
 ```r
-    create_package(path = "<< path >>")
+create_package(path = "<< path >>")
 ```
 
 Alternatively, we can add fields to the [`DESCRIPTION` file](https://r-pkgs.org/metadata.html#sec-description) at the same time as creating the package. Replace all `<< ... >>` with proper details.
 ```r
-    create_package(
-        path = "<< path >>",
-        fields = list(
-            `Title` = "<< title >>",
-            `Authors@R` = 'person("<< first name >>", "<< last name >>", 
-                          email = "<< email >>", 
-                          role = c("aut", "cre"), 
-                          comment = c(ORCID = "<< orcid >>"))',
+create_package(
+    path = "<< path >>",
+    fields = list(
+        `Title` = "<< title >>",
+        `Authors@R` = 'person("<< first name >>", "<< last name >>", 
+                            email = "<< email >>", 
+                            role = c("aut", "cre"), 
+                            comment = c(ORCID = "<< orcid >>"))',
         `Description` = "<< description >>"
-        )
     )
+)
 ```
 
 3. Set the package licence. See more details about package licences [here](https://r-pkgs.org/license.html). I used MIT.
 ```r
-    use_mit_license(copyright_holder = "<< name >>")
+use_mit_license(copyright_holder = "<< name >>")
 ```
 
 4. Add additional packages used in the package. **This step can be done even later as we create the package.** In this example, I use [`dplyr`](https://dplyr.tidyverse.org/).
 ```r
-    use_package("dplyr")
+use_package("dplyr")
 ```
 
 5. Create a README file. You can also use `use_readme_md()` if you just need a simple file.
 ```r
-    use_readme_rmd()
-    build_readme()
+use_readme_rmd()
+build_readme()
 ```
 
 
@@ -68,7 +68,7 @@ All functions should be written inside an R file (with extension `.R`). Each R f
 
 1. Create a R file.
 ```r
-    use_r(name = "<< file name >>")
+use_r(name = "<< file name >>")
 ```
 
 2. Add the function to the newly added file.
@@ -79,12 +79,12 @@ All functions should be written inside an R file (with extension `.R`). Each R f
 
 5. Check if the package loads properly. *This roughly simulates what happens when a package is installed and loaded with `library`. See [documentation](https://www.r-project.org/nosvn/pandoc/devtools.html) for more details.*
 ```r
-    load_all()
+load_all()
 ```
 
 6. updates the documentation, builds and check the package. *See [documentation](https://www.r-project.org/nosvn/pandoc/devtools.html) for more details.* 
 ```r
-    check()
+check()
 ```
 
 > This step can fail if you are saving the package to a network drive (at least on Windows with roxygen2 7.2.2). To mitigate this issue, install the development version from [GitHub](https://github.com/r-lib/roxygen2).
@@ -99,12 +99,12 @@ See more information on testing and using the `testthat` package, [here](https:/
 
 1. Setup testing.
 ```r
-    use_testthat()
+use_testthat()
 ```
 
 2. Setup a series of tests for each R file.
 ```r
-    use_test("<< file name >>")
+use_test("<< file name >>")
 ```
 
 3. Run tests with `test()`. Alternatively, it will be run automatically when you call `check()`.
@@ -126,22 +126,22 @@ Use GitHub to easily create a website for the package. Git should be installed o
 
 1. Get a personal access token (PAT). Run this and follow instructions on browser. See [documentation](https://usethis.r-lib.org/articles/git-credentials.html) for more information.
 ```r
-    create_github_token()
+create_github_token()
 ```
 
 2. Insert your PAT in the Git credential store.
 ```r
-    gitcreds::gitcreds_set()
+gitcreds::gitcreds_set()
 ```
 
 3. Setup GitHub to publish the site on GitHub.
 ```r
-    use_pkgdown_github_pages()
+use_pkgdown_github_pages()
 ```
 
 4. Build the site.
 ```r
-    build_site()
+build_site()
 ```
 
 ### Code of conduct
