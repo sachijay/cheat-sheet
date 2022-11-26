@@ -12,5 +12,5 @@ A knowledge-base of random stuff I found.
 3. [Windows](windows/) related stuff.
 	1. [chocolatey](windows/chocolatey.md) - Install Chocolatey and Chocolatey GUI.
 
-4. [R](R/) related stuff.
-	1. [pkg_build.md](R/pkg_build.md) - Create a R package
+4. [R](r/) related stuff.
+	1. [pkg_build.md](r/pkg_build.md) - Create a R package
