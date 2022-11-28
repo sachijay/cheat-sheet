@@ -92,6 +92,11 @@ check()
 > devtools::install_github("r-lib/roxygen2")
 > ```
 
+7. If a note says documentation is not created, run
+```r
+document()
+```
+
 
 ## Testing
 
